@@ -1,25 +1,37 @@
-// Create array
-const months = ["Feb", "Mar", "Apr", "May"];
+// Function to count vowels (a, e, i, o, u, y) case-insensitively
 
-// Display
-console.log(months); // Display array
-console.log(months.length); // Display length
-console.log(months[0]) // First element
+function countVowels(word)
 
-// "Jun" to the end
-months.push("Jun");
-console.log(months); // Display array
-console.log(months.length); // Display length
-console.log(months[months.length - 1]) // Last element
+{
+    const lowerWord = word.toLowerCase();
+    const vowels = ['a','e','i','o','u','y'];
+    let count = 0;
+    for (const char of lowerWord)
+        
+    {
+        if (vowels.includes(char))
+        
+        {
+            count++;
+        }
+    }
+    return count;
+}
 
-months.unshift("Jan"); // At at beginning
-console.log(months); // Display array
-console.log(months.length); // Display length
-console.log(months[0]) // First element
+// Function to check if word is a palindrome (case-insensitive)
 
-months.pop(); // Remove last element
-console.log(months); // Display array
+function isPalindrome(word)
 
-months.splice(0, 2) // Remove first two elements
-console.log(months); // Display array
+{
+    const lowerWord = word.toLowerCase();
+    const reversedWord = lowerWord.split('').reverse().join('');
+    return lowerWord === reversedWord;
+}
 
+// Main program
+
+const word = prompt("Hello! Please enter a word:");
+const vowelCount = countVowels(word);
+const palindromeCheck = isPalindrome(word);
+
+console.log(`${word} has ${vowelCount} vowels and ${palindromeCheck ? 'is a palindrome' : 'isnt a palindrome'}`);

@@ -1,26 +1,21 @@
-// Generate 10 random numbers between 1 - 10
+// Create the dog object
 
-// Step 1 - See what Math.random() looks like
-console.log("============== STEP 1 ==============");
-for (let i = 0; i < 10; i++) {
-  console.log(Math.random());
-}
+const dog = {
+  name: "Balto",
+  species: "Siberian Husky",
+  size: "large doggy",
 
-// Step 2 - See what Math.random() * 10  looks like
-console.log("============== STEP 2 ==============");
-for (let i = 0; i < 10; i++) {
-  console.log(Math.random() * 10);
-}
+  // How to mak the dog bark
 
+  bark: function () 
+  
+  {
+      return "Woof! Woof!";
 
-// Step 3 - See what Math.random() * 10 + 1 looks like
-console.log("============== STEP 3 ==============");
-for (let i = 0; i < 10; i++) {
-  console.log((Math.random() * 10) + 1);
-}
+  }
+};
 
-// Step 4 - truncate (or use floor)
-console.log("============== STEP 4: Complete ==============");
-for (let i = 0; i < 10; i++) {
-  console.log(Math.trunc((Math.random() * 10) + 1));
-}
+// Output the results
+
+console.log(`${dog.name} is a ${dog.species} and he's a ${dog.size}`);
+console.log(`Sean's neighbor's cat ran outside! ${dog.name} barks: ${dog.bark()}`);

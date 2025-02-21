@@ -1,20 +1,32 @@
-// Let's use method 3 and return the sum
-const sum = (n1, n2) => {
-  return n1 + n2;
+// Write code for a function
+
+// TODO:  your code here
+
+
+// Test your function
+let deg212 = 212;
+let converted212 = fahrenheitToCelsius(deg212);
+console.log(`Water's boiling temperature is ${deg212} Fahrenheit or ${converted212} Celsius`);
+
+// Note the following:
+//   Input: Fahrenheit temperature
+//   Return: Fahrenheit temperature converted to Celsius
+
+// Create input and output variables and test
+
+
+// Function to convert Fahrenheit to Celsius
+function fahrenheitToCelsius(fahrenheit)
+
+{
+  const celsius=(fahrenheit-32)*(5/9);
+  return celsius;
 }
 
-// Test the function
-const aSum = sum(9, 8);
-console.log(`The sum of 9 + 8 = ${aSum}`);
 
-console.log(`Another message: 3 + 5 = ${sum(3, 5)}`);
+// Test with 32 degrees Fahrenheit (No variables)
+console.log(`32 degrees Fahrenheit = ${fahrenheitToCelsius(32)} degrees Celsius`);
 
-let arg1 = 2;
-let arg2 = 7;
-const getSum = sum(arg1, arg2);
-console.log(`The sum of ${arg1} + ${arg2} = ${getSum}`);
-if (getSum % 2 === 0) {
-  console.log("The sum is EVEN");  
-} else {
-  console.log("The sum is ODD");
-}
+// Test with 98.7 degrees Fahrenheit and format the result to 2 decimal places
+let deg98pt7 = 98.7;
+console.log(`Temperature of ${deg98pt7} Fahrenheit is ${fahrenheitToCelsius(deg98pt7).toFixed(2)} degrees Celsius`);

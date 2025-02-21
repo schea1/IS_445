@@ -1,14 +1,26 @@
-function sayHello() {
-  const message = "Hello!";
-  return message;
-}
-
-console.log(sayHello()); // "Hello!"
-console.log(message); // Error: the message variable is not visible here
-
 const r = Number(prompt("Enter the circle radius:"));
 
-// TODO: create the circle object here
+// We would create the circle object
+
+const circle = {
+    radius: r,
+
+    // Below is the method to calculate the circumference
+    circumference: function ()
+    
+    {
+        return 2 * Math.PI * this.radius;
+    },
+
+    // Method to calculate the area
+    area: function ()
+    
+    {
+        return Math.PI * this.radius ** 2;
+    }
+};
+
+// Output the results
 
 console.log(`Its circumference is ${circle.circumference()}`);
 console.log(`Its area is ${circle.area()}`);
